@@ -1,0 +1,20 @@
+<span>Here is the list of all recipes in the cookbook</span>
+
+   <ul>
+    <% @recipies.each_with_index do |username, index| %>
+      <li>
+        <%= index + 1 %>
+         -
+        <%= username.name %>
+      </li>
+    <% end %>
+  </ul>
+
+<span>What recipe do you want to destroy</span>
+
+<form method="POST" action="/destroy">
+  Index to destroy:<br>
+  <input type="text" name="index"><br>
+
+  <input type="submit" value="Submit">
+</form>
